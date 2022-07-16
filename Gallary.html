@@ -11,12 +11,74 @@
       href="https://www.nagina.com/wp-content/uploads/2020/12/LOGO-5-1-e1609940240975.png"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="/style-home.css" />
+
+      <style>
+        fieldset
+        {
+          background: none;
+        }
+      </style>
+    <script>
+      /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+      function myFunction(num) {
+        document.getElementById("myDropdown" + num).classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown1");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown2");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
   </head>
   <body>
     <img
       src="https://www.nagina.com/wp-content/uploads/2020/12/LOGO-5-1-e1609940240975.png"
       alt="Nagina-Logo"
     />
+
+    <div class="navbar" style="margin: 2px;">
+      <a href="/mills.html" target="_blank">Offices & Mills </a>
+      <div class="dropdown">
+        <button onclick="myFunction(1)" class="dropbtn">
+          Investor Information
+        </button>
+        <div id="myDropdown1" class="dropdown-content">
+          <a href="#">Nagina Cotton Mills Ltd.</a>
+          <a href="#">Ellcot Spinning Mills Ltd.</a>
+          <a href="#">Prosperity Weaving</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button onclick="myFunction(2)" class="dropbtn">
+          Investor Relationship
+        </button>
+        <div id="myDropdown2" class="dropdown-content">
+          <a href="#">Nagina Cotton Mills Ltd.</a>
+          <a href="#">Ellcot Spinning Mills Ltd.</a>
+          <a href="#">Prosperity Weaving</a>
+        </div>
+      </div>
+
+      <a href="/Team.html" target="_blank">Prestigious Team</a>
+    </div>
+    <br>
 
     <fieldset align = "center">
       <h1>Nagina Cotton Mills Ltd.</h1>
@@ -100,20 +162,20 @@
 
   </body>
 
-    <footer>
-        <a href="/Home.html" target="_blank">Home |</a>
+  <footer>
+    <a href="/Contact.html" target="_blank">Contact</a>
+    &nbsp;
 
-    <a href="/Contact.html" target="_blank">Contact |</a>
-    <a href="#" target="_blank">Our Culture |</a>
-    <a href="#" target="_blank"> Career</a>    
-    <aside>
-      <dir>
-        <a
-          href="https://www.linkedin.com/company/nagina-group/?originalSubdomain=pk"
-          target="_blank"
-          ><img src="data:image/png;base64,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" alt="LinkedInn" width="25%" height="20%"></a
-        >
-      </dir>
-    </aside>
+    <a href="#" target="_blank"> Career</a>
+    &nbsp;
+
+    <a href="/Gallary.html" target="_blank"> Gallery</a>
+    &nbsp;
+
+    <a
+      href="https://www.linkedin.com/company/nagina-group/?originalSubdomain=pk"
+      target="_blank"
+      >Linked In</a
+    >
   </footer>
 </html>
