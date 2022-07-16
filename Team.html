@@ -10,21 +10,81 @@
       href="https://www.nagina.com/wp-content/uploads/2020/12/LOGO-5-1-e1609940240975.png"
       type="image/x-icon"
     />
+
+    <link rel="stylesheet" href="/style-home.css" />
+    <style>
+      fieldset
+      {
+        background-color: aliceblue;
+        background: none;
+      }
+    </style>
+
+    <script>
+      /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+      function myFunction(num) {
+        document.getElementById("myDropdown" + num).classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown1");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown2");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
+    </script>
+  </head>
   </head>
   <header>
-    <center>
+
       <img
         src="https://www.nagina.com/wp-content/uploads/2020/12/LOGO-5-1-e1609940240975.png"
         alt="Nagina-Logo"
       />
-      <nav>
-        <a href="/Home.html" target="_blank">Home |</a>
-        <a href="/mills.html" target="_blank">Offices & Mills |</a>
-        <a href="#" target="_blank">Investor Information |</a>
-        <a href="#" target="_blank">Investor Relationship</a>
-      </nav>
-    </center>
+     
+ 
+
+    <div class="navbar" style=" margin: 2px;">
+      <a href="/Home.html" target="_blank">Home </a>
+      <div class="dropdown">
+        <button onclick="myFunction(1)" class="dropbtn">
+          Investor Information
+        </button>
+        <div id="myDropdown1" class="dropdown-content">
+          <a href="#">Nagina Cotton Mills Ltd.</a>
+          <a href="#">Ellcot Spinning Mills Ltd.</a>
+          <a href="#">Prosperity Weaving</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button onclick="myFunction(2)" class="dropbtn">
+          Investor Relationship
+        </button>
+        <div id="myDropdown2" class="dropdown-content">
+          <a href="#">Nagina Cotton Mills Ltd.</a>
+          <a href="#">Ellcot Spinning Mills Ltd.</a>
+          <a href="#">Prosperity Weaving</a>
+        </div>
+      </div>
+
+      <a href="/mills.html" target="_blank">Offices and Mills</a>
+    </div>
   </header>
+  <hr>
   <body>
     <fieldset>
       <h1 align="center"><u>Prestigious Team</u></h1>
